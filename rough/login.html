@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="index" href="index.html">
+
+</head>
+<body class="bg-gradient d-flex justify-content-center align-items-center vh-100">
+    <div class="card text-center p-4 shadow-lg bg-black text-white" style="width: 400px; border-radius: 12px;">
+      <img src="https://upload.wikimedia.org/wikip<div class="card text-center p-4 shadow-lg bg-dark text-white" style="width: 400px; border-radius: 12px;">
+        <!-- Library Logo -->
+        <!-- <img src="library-logo.png" alt="Library Logo" class="mb-4" style="width: 100px;"> -->
+        <h5 class="mb-3">Welcome to the Library</h5>
+        <div class="d-grid gap-2">
+          <!-- Social Login Buttons -->
+        <button class="btn btn-outline-light btn-lg">Continue with Google</button>
+        <button class="btn btn-outline-light btn-lg">Continue with Facebook</button>
+        <button class="btn btn-outline-light btn-lg">Continue with Apple</button>
+        <button class="btn btn-outline-light btn-lg">Continue with phone number</button>
+      </div>
+      <hr class="text-secondary my-4">
+      <!-- Login Form -->
+      <form id="loginForm">
+        <div class="mb-3 text-start">
+          <label for="email" class="form-label">Email or username</label>
+          <input type="text" class="form-control bg-dark text-white" id="email" placeholder="Email or username" required>
+        </div>
+        <div class="mb-3 text-start position-relative">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control bg-dark text-white" id="password" placeholder="Password" required>
+          <span class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary" id="togglePassword" style="cursor: pointer;"></span>
+        </div>
+        <button type="submit" class="btn btn-success w-100 mb-2">Log In</button>
+        <a href="#" class="text-white-50">Forgot your password?</a>
+      </form>
+      
+      <p class="mt-4">Don't have an account? <a href="#" class="text-success">Sign up here</a></p>
+    </div>
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

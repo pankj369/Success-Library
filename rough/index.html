@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Website</title>
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.html">
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+
+  </head>
+  <body>
+    <div id="promoModal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                  <h5 class="modal-title">🎉 Join Our Classes Today!</h5>
+             </div>
+                   <!-- Modal Body -->
+              <div class="modal-body">
+                  <p>📚 Enroll in our batches before <strong>1st January</strong> and get <strong>15 days of free classes</strong>!</p>
+                  <p><strong>🌟 Get 20% off on your next purchase! 🌟</strong></p>
+
+                  <p>Start your journey to success now. Don’t miss this opportunity!</p>
+              </div>
+              <div class="modal-footer">
+                  <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Claim Offer</button>
+      </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+ <!-- Header Section -->
+    <header>
+      <nav class="navbar">  
+        <!-- Website Logo -->
+        <div class="logo">      <img src="logo.png" alt="Success Library Logo" class="logo-img" />
+        </div>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Catalog</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+            <!-- Authentication Buttons -->
+             <!-- <div class="auth-buttons">
+          <a href="login.html" class="btn btn-success">Log In</a></div> -->
+              <!-- Responsive Navbar Toggle Button -->
+        <button
+          class="burger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        ><span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span></button>
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+     <!-- Hero Section -->
+<section class="hero" id="heroSection">
+  <!-- Background Animation -->
+  <div class="hero-background"></div>
+
+  <!-- Content Wrapper -->
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <img src="https://img.icons8.com/?size=80&id=etrl0QLJDest&format=png" alt="Book Icon" class="floating-icon icon-1">Welcome to LibrarySpace<img src="https://img.icons8.com/?size=80&id=GHSh1jCeMfBz&format=png" alt="Lightbulb Icon" class="floating-icon icon-2"></h1>
+    <p class="hero-description">Your perfect study spot with all the resources you need.<br> Explore an endless world of books, learning resources, and study spaces.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary">Browse the Catalog</button>
+      <button class="btn-secondary">Learn More</button>
+    </div>
+  </div>
+
+  <!-- Floating Elements -->
+  <div class="floating-images">
+  </div>  
+</section>
+
+     <!-- Personalized Recommendations Section -->
+<div class="featured-books">
+<section id="featuredBooks" data-aos="fade-up">
+  <h2>Ours Feature</h2>
+  <div class="book-cards">
+    <p class="subheading">Discover the best features tailored just for you!</p>
+
+  </div>
+</section>
+</div><section class="features">
+  <!-- Feature 1 -->
+  <div class="feature-card">
+    <div class="card-front">
+      <i class="fas fa-couch"></i>
+      <h3>Study Zone</h3>
+      <p>Dedicated study zones for serious learners.</p>
+    </div>
+    <div class="card-back">
+      <i class="fas fa-couch"></i>
+      <h3>Quiet Space</h3>
+      <p>Perfect for undisturbed study sessions.</p>
+    </div>
+  </div>
+  <!-- Feature 2 -->
+  <div class="feature-card">
+    <div class="card-front">
+      <i class="fas fa-book"></i>
+      <h3>Exclusive Books</h3>
+      <p>Access preparation-specific books and materials.</p>
+    </div>
+    <div class="card-back">
+      <i class="fas fa-book"></i>
+      <h3>Updated Books</h3>
+      <p>Updated frequently to meet your needs.</p>
+    </div>
+  </div>
+  <!-- Feature 3 -->
+  <div class="feature-card">
+    <div class="card-front">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Innovative Ideas</h3>
+      <p>Inspiring resources for creative thinkers.</p>
+    </div>
+    <div class="card-back">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Bright Insights</h3>
+      <p>Explore innovative and insightful concepts.</p>
+    </div>
+  </div>
+</section>
+
+      
+      <section id="features" class="feature-container"></section>
+        <!--features content-->
+        <div class="membership-container">
+          <h2 class="membership-title">Membership Benefits</h2>
+          <div class="membership-cards">
+            <!-- Personalized Study Plans -->
+            <div class="membership-card">
+              <i class="membership-icon fas fa-calendar-alt"></i>
+              <h3>Personalized Study Plans</h3>
+              <p>Get assistance in setting study goals and schedules tailored to your needs.</p>
+            </div>
+        
+            <!-- Batch-Specific Networking -->
+            <div class="membership-card">
+              <i class="membership-icon fas fa-users"></i>
+              <h3>Batch-Specific Networking</h3>
+              <p>Connect with peers in the same study focus area for collaborative learning.</p>
+            </div>
+        
+            <!-- Flexible Timings -->
+            <div class="membership-card">
+              <i class="membership-icon fas fa-clock"></i>
+              <h3>Flexible Timings</h3>
+              <p>Choose study slots that fit your schedule for maximum productivity.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section id="features" class="feature-container"></section>
+        <!-- Features content -->
+        <div class="tech-container">
+          <h2 class="tech-title">Tech-Enabled Features</h2>
+          <div class="tech-cards">
+            <!-- Digital Batch Tracking -->
+            <div class="tech-card">
+              <i class="tech-icon fas fa-database"></i>
+              <h3>Digital Batch Tracking</h3>
+              <p>Easily access batch timings, schedules, and study plans through the portal.</p>
+            </div>
+        
+            <!-- Profile Management -->
+            <div class="tech-card">
+              <i class="tech-icon fas fa-user-cog"></i>
+              <h3>Profile Management</h3>
+              <p>Update your details, study focus, and preferences effortlessly online.</p>
+            </div>
+        
+            <!-- Search Functionality -->
+            <div class="tech-card">
+              <i class="tech-icon fas fa-search"></i>
+              <h3>Advanced Search</h3>
+              <p>Quickly find resources, books, or upcoming events with an efficient search tool.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </section>
+      <section id="features" class="feature-container"></section>
+        <div class="perks-container">
+          <h2 class="perks-title">Additional Perks</h2>
+          <div class="perks-cards">
+            <!-- Hydration and Refreshments -->
+            <div class="perks-card">
+              <i class="perks-icon fas fa-water"></i>
+              <h3>Hydration & Refreshments</h3>
+              <p>Stay refreshed with clean drinking water and light snacks available at all times.</p>
+            </div>
+        
+            <!-- Motivational Events -->
+            <div class="perks-card">
+              <i class="perks-icon fas fa-microphone"></i>
+              <h3>Motivational Events</h3>
+              <p>Attend workshops and guest lectures to inspire and guide your academic journey.</p>
+            </div>
+        
+            <!-- Progress Tracking -->
+            <div class="perks-card">
+              <i class="perks-icon fas fa-chart-line"></i>
+              <h3>Progress Tracking</h3>
+              <p>Keep track of your study hours and milestones to stay on top of your goals.</p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section id="testimonials" class="section testimonials-container">
+        <h2 class="testimonials-title">What Our Students Say</h2>
+        <div class="testimonials-cards">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The library environment is so peaceful and perfect for my exam preparation. Highly recommended!"
+            </p>
+            <h4 class="student-name">- Priya Sharma</h4>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "I love the resources provided here, especially the magazines and preparation books. It's a game-changer!"
+            </p>
+            <h4 class="student-name">- Rahul Verma</h4>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The motivational events and workshops really helped me stay focused and inspired. Amazing place!"
+            </p>
+            <h4 class="student-name">- Sneha Gupta</h4>
+          </div>
+        </div>
+      </section>
+      <section id="events" class="section events-container">
+        <h2 class="events-title">Upcoming Events</h2>
+        <div class="events-list">
+          <!-- Event 1 -->
+          <div class="event-card">
+            <h3 class="event-title">Library Workshop: Time Management</h3>
+            <p class="event-date">Date: 25th Nov 2024</p>
+            <p class="event-description">
+              Join us for a workshop on effective time management. Learn strategies to stay focused and maximize your productivity.
+            </p>
+            <a href="#!" class="event-link">Learn More</a>
+          </div>
+          <!-- Event 2 -->
+          <div class="event-card">
+            <h3 class="event-title">Guest Lecture: Study Techniques</h3>
+            <p class="event-date">Date: 30th Nov 2024</p>
+            <p class="event-description">
+              A guest lecture from a renowned educator on study techniques that will help you improve your learning process.
+            </p>
+            <a href="#!" class="event-link">Learn More</a>
+          </div>
+          <!-- Event 3 -->
+          <div class="event-card">
+            <h3 class="event-title">Library Meetup: Motivational Talk</h3>
+            <p class="event-date">Date: 5th Dec 2024</p>
+            <p class="event-description">
+              A motivational talk to inspire students to pursue their academic goals with confidence and focus.
+            </p>
+            <a href="#!" class="event-link">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <section id="study-tips" class="section study-tips-container">
+        <h2 class="study-tips-title">Study Tips for Success</h2>
+        <div class="study-tips-list">
+          <!-- Tip 1 -->
+          <div class="study-tip">
+            <button class="study-tip-title" onclick="toggleTip(0)">1. Time Management is Key</button>
+            <div class="study-tip-content">
+              <p>Effective time management helps you balance your studies and personal life. Create a study schedule and stick to it.</p>
+            </div>
+          </div>
+          <!-- Tip 2 -->
+          <div class="study-tip">
+            <button class="study-tip-title" onclick="toggleTip(1)">2. Take Regular Breaks</button>
+            <div class="study-tip-content">
+              <p>Don’t study for long periods without breaks. Take a 5-10 minute break after every 45 minutes of studying to stay fresh.</p>
+            </div>
+          </div>
+          <!-- Tip 3 -->
+          <div class="study-tip">
+            <button class="study-tip-title" onclick="toggleTip(2)">3. Set Realistic Goals</button>
+            <div class="study-tip-content">
+              <p>Set achievable goals for each study session. Break your tasks into smaller chunks and focus on one thing at a time.</p>
+            </div>
+          </div>
+          <!-- Tip 4 -->
+          <div class="study-tip">
+            <button class="study-tip-title" onclick="toggleTip(3)">4. Stay Organized</button>
+            <div class="study-tip-content">
+              <p>Keep your study materials organized. Use folders and planners to track your assignments and important deadlines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="resources" class="section resources-container">
+        <h2 class="resources-title">Library Resources</h2>
+        <div class="resources-list">
+          <!-- Resource 1 -->
+          <div class="resource-card">
+            <i class="fas fa-book fa-3x"></i>
+            <h3 class="resource-title">Books</h3>
+            <p class="resource-description">A wide selection of textbooks, reference books, and novels to cater to all academic fields.</p>
+          </div>
+          <!-- Resource 2 -->
+          <div class="resource-card">
+            <i class="fas fa-newspaper fa-3x"></i>
+            <h3 class="resource-title">Magazines</h3>
+            <p class="resource-description">Stay updated with the latest trends, news, and academic journals through our magazine collection.</p>
+          </div>
+          <!-- Resource 3 -->
+          <div class="resource-card">
+            <i class="fas fa-laptop fa-3x"></i>
+            <h3 class="resource-title">Online Databases</h3>
+            <p class="resource-description">Access academic databases, research papers, and e-books for in-depth learning and study.</p>
+          </div>
+          <!-- Resource 4 -->
+          <div class="resource-card">
+            <i class="fas fa-chalkboard-teacher fa-3x"></i>
+            <h3 class="resource-title">Workshops</h3>
+            <p class="resource-description">Participate in regular workshops on topics like time management, exam preparation, and more.</p>
+          </div>
+        </div>
+      </section>
+      <section id="ratings-reviews" class="section ratings-reviews-container">
+        <h2 class="ratings-reviews-title">Rate Your Experience</h2>
+        
+        <!-- Star Rating System -->
+        <div class="ratings-stars">
+          <label for="star1" class="star">&#9733;</label>
+          <input type="radio" name="rating" id="star1" value="1">
+          <label for="star2" class="star">&#9733;</label>
+          <input type="radio" name="rating" id="star2" value="2">
+          <label for="star3" class="star">&#9733;</label>
+          <input type="radio" name="rating" id="star3" value="3">
+          <label for="star4" class="star">&#9733;</label>
+          <input type="radio" name="rating" id="star4" value="4">
+          <label for="star5" class="star">&#9733;</label>
+          <input type="radio" name="rating" id="star5" value="5">
+        </div>
+      
+        <!-- Review Form -->
+        <form id="reviewForm" class="review-form">
+          <input type="text" name="name" placeholder="Your Name" class="review-input" required>
+          <textarea name="review" placeholder="Your Review" class="review-textarea" required></textarea>
+          <button type="submit" class="review-submit">Submit Review</button>
+        </form>
+      
+        <!-- Display Submitted Reviews -->
+        <div id="reviews-list" class="reviews-list">
+          <!-- Reviews will be added dynamically here -->
+          <div class="review-item">
+            <p class="review-name">John Doe</p>
+            <p class="review-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="review-text">"A very peaceful environment to study with great resources and a friendly atmosphere!"</p>
+          </div>
+          <div class="review-item">
+            <p class="review-name">Sarah Lee</p>
+            <p class="review-rating">&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="review-text">"The library's resources were really helpful for my exam prep. The quiet zones are ideal for focus."</p>
+          </div>
+        </div>
+
+      </section>
+      
+    </main>
+     
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <!-- About Company -->
+          <div class="footer-col">
+            <h4>About company</h4>
+            <p>
+              Take your projects to the next level with our premium collections of ready-to-use products at your fingertips.
+            </p>
+            <p><strong>Email:</strong> support@librarywebsite.com</p>
+          </div>
+  
+          <!-- Most Loved -->
+          <div class="footer-col">
+            <h4>Most loved</h4>
+            <ul>
+              <li><a href="#">Book Recommendation Tool</a></li>
+              <li><a href="#">E-book Reader Integration</a></li>
+              <li><a href="#">Online Library Management</a></li>
+              <li><a href="#">Virtual Book Clubs</a></li>
+            </ul>
+          </div>
+  
+          <!-- Categories -->
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#">E-books</a></li>
+              <li><a href="#">Magazines</a></li>
+              <li><a href="#">Research Papers</a></li>
+              <li><a href="#">Audiobooks</a></li>
+            </ul>
+          </div>
+  
+          <!-- Customer Support -->
+          <div class="footer-col">
+            <h4>Customer support</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2024 Library Website. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+  
+
+
+    </footer>
+
+
+
+<!-- Chatbot Window -->
+<div id="chatWindow" class="chat-window" style="display: none;">
+  <div class="chat-header">
+    <h3>Live Chat</h3>
+    <button id="closeChat" class="close-chat">X</button>
+  </div>
+  <div class="chat-body">
+    <div id="chatMessages" class="chat-messages">
+      <!-- Chat messages will go here -->
+    </div>
+    <input type="text" id="chatInput" placeholder="Type a message..." />
+    <button id="sendMessage" class="send-message">Send</button>
+  </div>
+</div>
+<!-- Exit-Intent Popup -->
+<div id="exitPopup" class="exit-popup">
+  <div class="exit-popup-content">
+    <h2>Wait! Before you go...</h2>
+    <p>Subscribe to our newsletter and never miss an update!</p>
+    <input type="email" placeholder="Enter your email" />
+    <button id="subscribeBtn">Subscribe</button>
+    <button id="closePopup" class="close-btn">No Thanks</button>
+  </div>
+</div>
+<!-- Exit-Intent Modal -->
+<div class="modal" id="exitIntentModal" tabindex="-1" aria-labelledby="exitIntentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exitIntentModalLabel">Exit Intent</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to exit?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>  
+        <button type="button" class="btn btn-primary">Exit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/674046212480f5b4f5a25d8b/1id9h3t6s';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation happens only once when scrolled into view
+    });
+  </script>
+  <script>
+  AOS.init({
+    duration: 1000,  // Animation duration in milliseconds
+    once: true,      // Animation happens only once when scrolled into view
+  });
+</script>
+
+        
+
+
+  </body>
+</html>
