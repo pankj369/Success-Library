@@ -74,6 +74,7 @@ header {
   font-weight: bold;
   transition: color 0.3s ease;
   padding: 8px 12px;
+  pointer-events: auto;
 }
 .nav-links li a:hover {
   color: #ffcc00; /* Hover effect */
@@ -85,8 +86,8 @@ header {
 
 /* Logo Image Styling */
 .logo-img {
-  width: 120px; /* Default width */
-  height: 40px; /* Keep aspect ratio */
+  width: auto; /* Default width */
+  height: 50px; /* Keep aspect ratio */
   transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth animation for scaling and opacity */
   
   display: block;
@@ -165,6 +166,22 @@ header {
   height: 3px;
   background-color: white;
   border-radius: 2px;
+}
+.login-btn {
+  background:none; /* Button color */
+  color: rgb(255, 255, 255); /* Text color */
+  padding: 10px 20px; /* Padding */
+ 
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-weight: bold; /* Bold text */
+  display: inline-block; /* Make it behave like a block-level element */
+  transition: background-color 0.3s ease;
+  margin-right: 8px;
+}
+.login-btn:hover{
+  background-color: #ffcc00;
 }
 
 /* Responsive Design */
@@ -288,7 +305,7 @@ header {
 /* Hero Section Styling */
 .hero {
   position: relative;
-  height: 80vh; /* Reduced height */
+  height: 100vh; 
   background: url('https://images.pexels.com/photos/8500354/pexels-photo-8500354.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center/cover; /* Background Image */
   display: flex;
   justify-content: center;
@@ -321,7 +338,7 @@ header {
 
 /* Content Styling */
 .hero-content {
-  z-index: 1;
+  z-index: 5;
 }
 
 .hero-title {
@@ -375,18 +392,6 @@ header {
   color: white;
 }
 
-/* Floating Icons Styling */
-.floating-images {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  animation: floatIcons 5s infinite alternate; /* Animation for icons */
-}
-
 .floating-icon {
   width: 60px;
   height: 60px;
@@ -429,7 +434,7 @@ header {
 /* Responsive Styling */
 @media (max-width: 768px) {
   .hero {
-    height: 60vh; /* Reduced height on smaller screens */
+    height: 90vh; /* Reduced height on smaller screens */
   }
 
   .hero-title {
@@ -1061,8 +1066,6 @@ body.modal-active {
 
 
 
-/* login page like spotify */
-      /* style.css */
 /* Background gradient */
 body.bg-gradient {
   background: linear-gradient(180deg, #f3f4f7, #d4e3e5);

@@ -1,53 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <!-- Bootstrap -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="index" href="index.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://images.pexels.com/photos/2943603/pexels-photo-2943603.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center/cover;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
+    /* Adding a blur effect */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .card {
+      z-index: 2;
+      border-radius: 15px;
+      overflow: hidden;
+      background: rgba(255, 242, 242, 0.274); /* Semi-transparent background */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #2b59c3, #1a73e8);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #1a73e8;
+    }
+
+    .card-header h5 {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2b59c3, #1a73e8);
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0c57b9, #0d4ee7);
+    }
+
+    .text-muted a {
+      color: #1255f0;
+      text-decoration: none;
+    }
+
+    .text-muted a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body class="bg-gradient d-flex justify-content-center align-items-center vh-100">
-    <div class="card text-center p-4 shadow-lg bg-black text-white" style="width: 400px; border-radius: 12px;">
-      <img src="https://upload.wikimedia.org/wikip<div class="card text-center p-4 shadow-lg bg-dark text-white" style="width: 400px; border-radius: 12px;">
-        <!-- Library Logo -->
-        <!-- <img src="library-logo.png" alt="Library Logo" class="mb-4" style="width: 100px;"> -->
-        <h5 class="mb-3">Welcome to the Library</h5>
-        <div class="d-grid gap-2">
-          <!-- Social Login Buttons -->
-        <button class="btn btn-outline-light btn-lg">Continue with Google</button>
-        <button class="btn btn-outline-light btn-lg">Continue with Facebook</button>
-        <button class="btn btn-outline-light btn-lg">Continue with Apple</button>
-        <button class="btn btn-outline-light btn-lg">Continue with phone number</button>
-      </div>
-      <hr class="text-secondary my-4">
+<body>
+  <!-- Overlay for blur effect -->
+  <div class="overlay"></div>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>Welcome to Our Library</h5>
+    </div>
+    <div class="card-body">
       <!-- Login Form -->
       <form id="loginForm">
-        <div class="mb-3 text-start">
-          <label for="email" class="form-label">Email or username</label>
-          <input type="text" class="form-control bg-dark text-white" id="email" placeholder="Email or username" required>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email or Username</label>
+          <input type="text" id="email" class="form-control" placeholder="Enter your email or username" required>
         </div>
-        <div class="mb-3 text-start position-relative">
+        <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control bg-dark text-white" id="password" placeholder="Password" required>
-          <span class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary" id="togglePassword" style="cursor: pointer;"></span>
+          <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
         </div>
-        <button type="submit" class="btn btn-success w-100 mb-2">Log In</button>
-        <a href="#" class="text-white-50">Forgot your password?</a>
+        <button type="submit" class="btn btn-primary w-100">Log In</button>
+        <p class="text-muted text-center mt-3">
+          <a href="#">Forgot Password?</a>
+        </p>
       </form>
-      
-      <p class="mt-4">Don't have an account? <a href="#" class="text-success">Sign up here</a></p>
+      <p class="text-muted text-center mt-4">
+        Don’t have an account? <a href="signup.html">Sign up</a>
+      </p>
     </div>
-  <!-- Bootstrap Script -->
+  </div>
+
+  <script>
+    // Handle login form submission
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (email && password) {
+        alert(`Welcome back, ${email}!`);
+        window.location.href = "index.html"; // Redirect after successful login
+      } else {
+        alert("Please fill out all fields!");
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JavaScript -->
-  <script src="script.js"></script>
-  
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
