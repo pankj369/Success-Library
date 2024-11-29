@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Registration</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://images.pexels.com/photos/374748/pexels-photo-374748.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center/cover;
+      
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Overlay for blur effect */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .card {
+      z-index: 2;
+      border-radius: 15px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 450px;
+      animation: slideIn 1s ease-out; /* Animation on load */
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #28a745, #218838);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #1c7430;
+    }
+
+    .card-header h5 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #218838, #1c7430);
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #1a5f29, #18582c);
+      transform: translateY(-2px); /* Slight hover lift */
+    }
+
+    .form-control:focus {
+      border-color: #218838;
+      box-shadow: 0 0 5px rgba(33, 136, 56, 0.5);
+    }
+
+    .text-muted a {
+      color: #218838;
+      text-decoration: none;
+    }
+
+    .text-muted a:hover {
+      text-decoration: underline;
+    }
+
+    small {
+      display: block;
+      color: #6c757d;
+      margin-top: 5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Overlay for blur effect -->
+  <div class="overlay"></div>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>Library Registration</h5>
+      <p class="mb-0">Join our library for exclusive study resources!</p>
+    </div>
+    <div class="card-body">
+      <!-- Registration Form -->
+      <form id="registrationForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="contact" class="form-label">Contact Number</label>
+          <input type="tel" id="contact" class="form-control" placeholder="Enter your contact number" pattern="[0-9]{10}" required>
+          <small>Format: 10 digits only</small>
+        </div>
+        <div class="mb-3">
+          <label for="batch" class="form-label">Batch Details</label>
+          <input type="text" id="batch" class="form-control" placeholder="Enter your batch details (e.g., Morning 6-9 AM)" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Create a password" required>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" id="terms" class="form-check-input" required>
+          <label for="terms" class="form-check-label">I agree to the <a href="#">Terms and Conditions</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+        <p class="text-muted text-center mt-3">
+          Already registered? <a href="login.html">Log in</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Handle registration form submission
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const contact = document.getElementById('contact').value;
+      const batch = document.getElementById('batch').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Validate passwords match
+      if (password !== confirmPassword) {
+        alert('Passwords do not match. Please try again.');
+        return;
+      }
+
+      // Simulate successful registration
+      alert(`Thank you for registering, ${name}! Welcome to our library.`);
+      window.location.href = "index.html"; // Redirect to homepage after registration
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

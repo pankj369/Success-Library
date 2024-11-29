@@ -11,6 +11,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Headline styling */
+.modal-header h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
 /* Modal styling */
 .modal-content {
   background: linear-gradient(
@@ -25,34 +33,73 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Headline styling */
-.modal-header h5 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0 auto;
-}
+  /* Modal Footer */
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid #ccc;
+  }
 
-/* Button hover effect */
-.cta-button {
-  background-color: #ff9800;
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
+  /* Buttons */
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+  }
 
-.cta-button:hover {
-  background-color: #e65100;
-}
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
 
-header {
-  background-color: #333;
-  color: #fff;
-}
+  .btn-primary {
+    background-color: #e63946;
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #d62839;
+    transform: scale(1.05); /* Slight hover zoom */
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+  }
+
+  /* Link inside Button */
+  .btn-primary a {
+    text-decoration: none;
+    color: white; /* White text */
+    font-size: 16px;
+  }
+
+  .btn-primary a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      margin: 10px;
+    }
+
+    .modal-title {
+      font-size: 18px;
+    }
+
+    .modal-body {
+      font-size: 14px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      font-size: 14px;
+    }
+  }
 /* Navbar Styles */
 .navbar {
   display: flex;
@@ -92,9 +139,6 @@ header {
   
   display: block;
 }
-
-
-
 /* Make Logo Responsive */
 @media (max-width: 768px) {
   .logo-img {
@@ -123,8 +167,6 @@ header {
 .logo-img {
   animation: fadeIn 1s ease-out;
 }
-
-
 /* For desktop - Always visible in a horizontal line */
 .nav-links {
   display: flex;
@@ -238,9 +280,6 @@ header {
   font-weight: bold; /* Bold text */
   transition: all 0.3s ease; /* Smooth hover effect */
 }
-
-
-
 /* Responsive Styling */
 @media (max-width: 768px) {
   .nav-btn {
@@ -454,9 +493,6 @@ header {
     top: 15%;
   }
 }
-
-
-
 /* Section Styling */
 .featured-books {
   padding: 10px 10px;
