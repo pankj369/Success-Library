@@ -187,7 +187,14 @@ body {
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
+.nav-item{
+  cursor: pointer;
+  /* transition: color 0.3s ease; */
+  
+}
+.nav-item:hover{
+  color: #ffcc00;
+}
 .nav-links a:hover {
   color: #ffd700; /* Gold hover effect */
 }

@@ -10,8 +10,10 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: url('https://images.pexels.com/photos/374748/pexels-photo-374748.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center/cover;
-      
+      background: url('https://images.pexels.com/photos/2943603/pexels-photo-2943603.jpeg?auto=compress&cs=tinysrgb&w=400') no-repeat center center/cover;
+      background-attachment: fixed; /* Keep background static on scroll */
+      background-color: #f0f0f0; /* Fallback color */
+
       margin: 0;
       display: flex;
       justify-content: center;
@@ -35,7 +37,7 @@
       z-index: 2;
       border-radius: 15px;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+      background: rgba(255, 242, 242, 0.274); /* Semi-transparent background */
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       width: 100%;
       max-width: 450px;
@@ -97,9 +99,42 @@
 
     small {
       display: block;
-      color: #6c757d;
+      color: #363636;
       margin-top: 5px;
     }
+    /* Select styling */
+.animated-select {
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+/* Hover effect */
+.animated-select:hover {
+  border-color: #218838;
+  box-shadow: 0 0 10px rgba(33, 136, 56, 0.5); /* Add glow */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Focus effect */
+.animated-select:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.6); /* Stronger glow */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .animated-select {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -115,8 +150,8 @@
 
   <div class="card">
     <div class="card-header">
-      <h5>Library Registration</h5>
-      <p class="mb-0">Join our library for exclusive study resources!</p>
+      <h5>Registration Form</h5>
+      <p class="mb-0">Join our library to claim this offer!</p>
     </div>
     <div class="card-body">
       <!-- Registration Form -->
@@ -136,8 +171,17 @@
         </div>
         <div class="mb-3">
           <label for="batch" class="form-label">Batch Details</label>
-          <input type="text" id="batch" class="form-control" placeholder="Enter your batch details (e.g., Morning 6-9 AM)" required>
+          <select id="batch" class="form-control animated-select" required>
+            <option value="" disabled selected>Select your batch</option>
+            <option value="morning-06-09">Morning 06-09 AM</option>
+            <option value="morning-09-10">Morning 09-12 AM</option>
+            <option value="afternoon-12-03">Afternoon 12-03 PM</option>
+            <option value="evening-05-08">Evening 05-08 PM</option>
+            <option value="weekend-10-01">Weekend 10-01 PM</option>
+          </select>
         </div>
+        
+        
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input type="password" id="password" class="form-control" placeholder="Create a password" required>
@@ -150,7 +194,7 @@
           <input type="checkbox" id="terms" class="form-check-input" required>
           <label for="terms" class="form-check-label">I agree to the <a href="#">Terms and Conditions</a></label>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Register</button>
+        <button type="submit" class="btn btn-primary w-100">Submit Form</button>
         <p class="text-muted text-center mt-3">
           Already registered? <a href="login.html">Log in</a>
         </p>
@@ -177,10 +221,7 @@
         return;
       }
 
-      // Simulate successful registration
-      alert(`Thank you for registering, ${name}! Welcome to our library.`);
-      window.location.href = "index.html"; // Redirect to homepage after registration
-    });
+});
   </script>
 
   <!-- Bootstrap JS -->

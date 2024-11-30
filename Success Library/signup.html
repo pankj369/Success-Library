@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: url('https://images.pexels.com/photos/2943603/pexels-photo-2943603.jpeg?auto=compress&cs=tinysrgb&w=1200') no-repeat center center/cover;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .card {
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-control:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #28a745, #218838);
+      border: none;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #218838, #1c7430);
+      transform: translateY(-2px);
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      display: none; /* Hidden by default */
+    }
+
+    @media (max-width: 576px) {
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="card">
+    <h3 class="text-center mb-4">Create an Account</h3>
+    <form id="signUpForm">
+      <!-- Full Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" maxlength="10" required>
+        <small class="text-muted">Phone number must be exactly 10 digits.</small>
+        <div id="phoneError" class="error-message">Invalid phone number. Please enter exactly 10 digits.</div>
+      </div>
+
+    <!-- Password -->
+<div class="mb-3 position-relative">
+  <label for="password" class="form-label">Password</label>
+  <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+  <span class="toggle-password position-absolute top-50 end-0 translate-middle-y me-3" style="cursor: pointer;">
+    <i id="passwordIcon" class="bi bi-eye-slash"></i>
+  </span>
+</div>
+
+<!-- Confirm Password -->
+<div class="mb-3 position-relative">
+  <label for="confirmPassword" class="form-label">Confirm Password</label>
+  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+  <span class="toggle-password position-absolute top-50 end-0 translate-middle-y me-3" style="cursor: pointer;">
+    <i id="confirmPasswordIcon" class="bi bi-eye-slash"></i>
+  </span>
+  <div id="passwordError" class="error-message">Passwords do not match.</div>
+</div>
+
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById('signUpForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const phoneInput = document.getElementById('phone');
+      const phoneError = document.getElementById('phoneError');
+      const phoneValue = phoneInput.value.trim();
+
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirmPassword');
+      const passwordError = document.getElementById('passwordError');
+      
+      // Validate phone number
+      if (!/^[0-9]{10}$/.test(phoneValue)) {
+        phoneError.style.display = 'block'; // Show phone error
+        phoneInput.focus();
+        return;
+      } else {
+        phoneError.style.display = 'none'; // Hide phone error
+      }
+
+      // Validate passwords match
+      if (passwordInput.value.trim() !== confirmPasswordInput.value.trim()) {
+        passwordError.style.display = 'block'; // Show password error
+        confirmPasswordInput.focus();
+        return;
+      } else {
+        passwordError.style.display = 'none'; // Hide password error
+      }
+
+      // Simulate successful registration
+      const name = document.getElementById('name').value.trim();
+      alert(`Thank you for signing up, ${name}!`);
+      window.location.href = "index.html"; // Redirect to homepage
+    });
+    // Function to toggle visibility
+  const togglePasswordVisibility = (field, icon) => {
+    if (field.type === 'password') {
+      field.type = 'text';
+      icon.classList.replace('bi-eye-slash', 'bi-eye'); // Change icon to "eye"
+    } else {
+      field.type = 'password';
+      icon.classList.replace('bi-eye', 'bi-eye-slash'); // Change icon to "eye-slash"
+    }
+  };
+
+  // Event listeners for toggling
+  passwordIcon.parentElement.addEventListener('click', () => {
+    togglePasswordVisibility(passwordField, passwordIcon);
+  });
+
+  confirmPasswordIcon.parentElement.addEventListener('click', () => {
+    togglePasswordVisibility(confirmPasswordField, confirmPasswordIcon);
+  });
+  </script>
+</body>
+</html>
