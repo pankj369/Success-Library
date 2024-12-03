@@ -52,8 +52,7 @@
           document.getElementById("countdown").innerHTML = "<strong>Offer has expired!</strong>";
           clearInterval(countdownInterval);
       }
-  }
-
+    }
   const countdownInterval = setInterval(updateCountdown, 1000);
   updateCountdown();
 </script>
@@ -81,7 +80,6 @@
     </div>
    </div>
   </div>
-
  <!-- Header Section -->
     <header>
       <nav class="navbar">  
@@ -97,7 +95,6 @@
           <li class="nav-item"><a onclick="window.location.href='login.html'">Log In</a></li>
           <li class="nav-item"><a onclick="window.location.href='register.html'">Register Now</a></li>
         </ul>
-        
         <!-- Responsive Navbar Toggle Button -->
         <button
           class="burger"
@@ -106,7 +103,7 @@
         ><span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span></button>
-       
+      </nav>
     </header>
     <!-- Main Content -->
     <main>
@@ -125,19 +122,16 @@
       <button class="btn-secondary">Learn More</button>
     </div>
   </div>
-
   <!-- Floating Elements -->
   <div class="floating-images">
   </div>  
 </section>
-
      <!-- Personalized Recommendations Section -->
 <div class="featured-books">
 <section id="featuredBooks" data-aos="fade-up">
   <h2>Ours Feature</h2>
   <div class="book-cards">
     <p class="subheading">Discover the best features tailored just for you!</p>
-
   </div>
 </section>
 </div><section class="features">
@@ -230,7 +224,6 @@
               <h3>Profile Management</h3>
               <p>Update your details, study focus, and preferences effortlessly online.</p>
             </div>
-        
             <!-- Search Functionality -->
             <div class="tech-card">
               <i class="tech-icon fas fa-search"></i>
@@ -239,7 +232,6 @@
             </div>
           </div>
         </div>
-
       </div>
       </section>
       <section id="features" class="feature-container"></section>
@@ -428,11 +420,8 @@
             <p class="review-text">"The library's resources were really helpful for my exam prep. The quiet zones are ideal for focus."</p>
           </div>
         </div>
-
       </section>
-      
-    </main>
-     
+    </main>  
     <!-- Footer Section -->
     <footer class="footer">
       <div class="container">
@@ -445,7 +434,6 @@
             </p>
             <p><strong>Email:</strong> support@librarywebsite.com</p>
           </div>
-  
           <!-- Most Loved -->
           <div class="footer-col">
             <h4>Most loved</h4>
@@ -456,7 +444,6 @@
               <li><a href="#">Virtual Book Clubs</a></li>
             </ul>
           </div>
-  
           <!-- Categories -->
           <div class="footer-col">
             <h4>Categories</h4>
@@ -479,7 +466,6 @@
             </ul>
           </div>
         </div>
-  
         <!-- Footer Bottom -->
         <div class="footer-bottom">
           <p>&copy; 2024 Library Website. All rights reserved.</p>
@@ -491,14 +477,7 @@
           </div>
         </div>
       </div>
-      
-  
-
-
     </footer>
-
-
-
 <!-- Chatbot Window -->
 <div id="chatWindow" class="chat-window" style="display: none;">
   <div class="chat-header">
@@ -569,9 +548,5 @@
     once: true,      // Animation happens only once when scrolled into view
   });
 </script>
-
-        
-
-
   </body>
 </html>
