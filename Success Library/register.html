@@ -192,7 +192,7 @@
         </div>
         <div class="form-check mb-3">
           <input type="checkbox" id="terms" class="form-check-input" required>
-          <label for="terms" class="form-check-label">I agree to the <a href="#">Terms and Conditions</a></label>
+          <label for="terms" class="form-check-label">I agree to the <a href="Terms and condition.html">Terms and Conditions</a></label>
         </div>
         <button type="submit" class="btn btn-primary w-100">Submit Form</button>
         <p class="text-muted text-center mt-3">
@@ -200,30 +200,7 @@
         </p>
       </form>
     </div>
-  </div>
-
-  <script>
-    // Handle registration form submission
-    document.getElementById('registrationForm').addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent form submission
-      
-      // Get form values
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const contact = document.getElementById('contact').value;
-      const batch = document.getElementById('batch').value;
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
-
-      // Validate passwords match
-      if (password !== confirmPassword) {
-        alert('Passwords do not match. Please try again.');
-        return;
-      }
-
-});
-  </script>
-
+  </div>   
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
